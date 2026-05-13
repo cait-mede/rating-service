@@ -6,7 +6,7 @@
    * [Data Model](#data-model)
    * [Features](#features)
    * [Setup](#setup)
-   
+
 - [API Usage](#api-usage)
    * [POST /ratings](#post-ratings)
    * [GET /ratings](#get-ratings)
@@ -48,6 +48,12 @@ Primary key:
 pip install -r requirements.txt
 ```
 
+### Run program
+Ensure you are in the rating-service directory.
+```bash
+python -m uvicorn main:app --reload
+```
+
 # API Usage
 
 ## POST /ratings
@@ -59,7 +65,7 @@ POST /ratings
 ```
 
 ### Example Request
-```Bash
+```bash
 curl -X POST http://127.0.0.1:8000/ratings \
 -H "Content-Type: application/json" \
 -d '{
@@ -87,7 +93,7 @@ GET /ratings?app_id={app_id}&entity_id={entity_id}
 ```
 
 ### Example Request
-```Bash
+```bash
 curl "http://127.0.0.1:8000/ratings?app_id=book_club&entity_id=harry_potter_1"
 ```
 
@@ -112,7 +118,7 @@ DELETE /ratings?app_id={app_id}&entity_id={entity_id}&user_id={user_id}
 ```
 
 ### Example Request
-```Bash
+```bash
 curl -X DELETE "http://127.0.0.1:8000/ratings?app_id=book_club&entity_id=harry_potter_1&user_id=user123"
 ```
 
