@@ -84,6 +84,9 @@ curl -X POST http://127.0.0.1:8000/ratings \
 }
 ```
 
+### UML Diagram
+<img src="images/POST_UML_Diagram.png" alt="UML Diagram for POST request" width="800">
+
 ## GET /ratings
 Retrieves all ratings for a specific entity within the database.
 
@@ -109,6 +112,9 @@ curl "http://127.0.0.1:8000/ratings?app_id=book_club&entity_id=harry_potter_1"
 }
 ```
 
+### UML Diagram
+<img src="images/GET_UML_Diagram.png" alt="UML Diagram for POST request" width="800">
+
 ## DELETE /ratings
 Retrieves all ratings for a specific entity within the database.
 
@@ -128,3 +134,6 @@ curl -X DELETE "http://127.0.0.1:8000/ratings?app_id=book_club&entity_id=harry_p
   "status": "deleted"
 }
 ```
+
+### UML Diagram
+<img src="images/DELETE_UML_Diagram.png" alt="UML Diagram for POST request" width="800">
